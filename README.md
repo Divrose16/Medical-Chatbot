@@ -63,7 +63,7 @@ This chatbot uses a medical encyclopedia as its knowledge base and answers user 
 ## 🧩 Setup Instructions
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/Divrose16/Medical-Chatbot
 cd Medical-Chatbot
 
 # Create virtual environment
