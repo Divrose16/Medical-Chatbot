@@ -1,0 +1,287 @@
+/* Light / White theme for your existing classes - paste into static/style.css */
+
+/* Palette — adjust these if you want different accents */
+:root{
+  --bg-1: #f7f8fa;    /* page background start */
+  --bg-2: #ffffff;    /* page background end */
+  --card-bg: #ffffff;  /* card background */
+  --muted-text: #6b7280; /* secondary text */
+  --text: #0f1724;    /* main text */
+  --accent: #2b6be6;  /* primary (user bubble) */
+  --accent-2: #10b981; /* assistant bubble alt (if needed) */
+  --glass: rgba(15,23,36,0.04);
+}
+
+/* Base */
+body,html{
+  height: 100%;
+  margin: 0;
+  background: linear-gradient(90deg, var(--bg-1), var(--bg-2));
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color: var(--text);
+}
+
+/* layout / card */
+.chat{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.card{
+  height: 500px;
+  border-radius: 15px !important;
+  background-color: var(--card-bg) !important;
+  box-shadow: 0 8px 30px rgba(15,23,36,0.06);
+  border: 1px solid rgba(15,23,36,0.06);
+}
+
+/* scroll areas */
+.contacts_body{
+  padding: 0.75rem 0 !important;
+  overflow-y: auto;
+  white-space: nowrap;
+}
+.msg_card_body{
+  overflow-y: auto;
+}
+
+/* header/footer radius */
+.card-header{
+  border-radius: 15px 15px 0 0 !important;
+  border-bottom: 0 !important;
+  background: linear-gradient(180deg, var(--card-bg), #fbfbfb);
+}
+.card-footer{
+  border-radius: 0 0 15px 15px !important;
+  border-top: 0 !important;
+  background: linear-gradient(0deg, var(--card-bg), #fbfbfb);
+}
+
+/* search / input style */
+.container{
+  align-content: center;
+}
+.search{
+  border-radius: 15px 0 0 15px !important;
+  background-color: var(--glass) !important;
+  border:0 !important;
+  color:var(--text) !important;
+}
+.search:focus{
+  box-shadow:none !important;
+  outline:0px !important;
+}
+
+/* message input */
+.type_msg{
+  background-color: #fff !important;
+  border:1px solid rgba(15,23,36,0.06) !important;
+  color: var(--text) !important;
+  height: 60px !important;
+  overflow-y: auto;
+  padding: .6rem .75rem;
+  border-radius: 10px;
+}
+.type_msg:focus{
+  box-shadow: 0 0 0 4px rgba(43,107,230,0.06) !important;
+  outline:0px !important;
+}
+
+/* buttons */
+.attach_btn{
+  border-radius: 15px 0 0 15px !important;
+  background-color: var(--glass) !important;
+  border:0 !important;
+  color: var(--text) !important;
+  cursor: pointer;
+}
+.send_btn{
+  border-radius: 0 15px 15px 0 !important;
+  background-color: var(--accent) !important;
+  border:0 !important;
+  color: #fff !important;
+  cursor: pointer;
+}
+.search_btn{
+  border-radius: 0 15px 15px 0 !important;
+  background-color: var(--glass) !important;
+  border:0 !important;
+  color: var(--text) !important;
+  cursor: pointer;
+}
+
+/* contacts list */
+.contacts{
+  list-style: none;
+  padding: 0;
+}
+.contacts li{
+  width: 100% !important;
+  padding: 5px 10px;
+  margin-bottom: 15px !important;
+}
+.active{
+  background-color: rgba(43,107,230,0.06);
+}
+
+/* avatars */
+.user_img{
+  height: 70px;
+  width: 70px;
+  border-radius: 12px;
+  border:1.5px solid rgba(15,23,36,0.06);
+  background: #fff;
+}
+.user_img_msg{
+  height: 40px;
+  width: 40px;
+  border-radius: 10px;
+  border:1.5px solid rgba(15,23,36,0.06);
+  background: #fff;
+}
+.img_cont{
+  position: relative;
+  height: 70px;
+  width: 70px;
+}
+.img_cont_msg{
+  height: 40px;
+  width: 40px;
+}
+
+/* online/offline indicator */
+.online_icon{
+  position: absolute;
+  height: 15px;
+  width:15px;
+  background-color: #10b981; /* green */
+  border-radius: 50%;
+  bottom: 0.2em;
+  right: 0.4em;
+  border:1.5px solid #fff;
+}
+.offline{
+  background-color: #ef4444 !important;
+}
+
+/* user info */
+.user_info{
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 15px;
+}
+.user_info span{
+  font-size: 20px;
+  color: var(--text);
+}
+.user_info p{
+  font-size: 10px;
+  color: var(--muted-text);
+}
+
+/* video cam / icons */
+.video_cam{
+  margin-left: 50px;
+  margin-top: 5px;
+}
+.video_cam span{
+  color: var(--text);
+  font-size: 20px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+/* message bubbles - keep same shapes but light colors */
+.msg_cotainer{
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 10px;
+  border-radius: 25px;
+  background-color: #eef3ff; /* assistant bubble - light blue */
+  padding: 10px;
+  position: relative;
+  color: var(--text);
+  border: 1px solid rgba(15,23,36,0.03);
+}
+.msg_cotainer_send{
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 10px;
+  border-radius: 25px;
+  background-color: var(--accent); /* user bubble - primary */
+  padding: 10px;
+  position: relative;
+  color: #fff;
+}
+
+/* timestamps */
+.msg_time{
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  color: rgba(15,23,36,0.45);
+  font-size: 10px;
+}
+.msg_time_send{
+  position: absolute;
+  right:0;
+  bottom: -15px;
+  color: rgba(255,255,255,0.8);
+  font-size: 10px;
+}
+
+/* header actions */
+.msg_head{
+  position: relative;
+}
+#action_menu_btn{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: var(--text);
+  cursor: pointer;
+  font-size: 20px;
+}
+.action_menu{
+  z-index: 1;
+  position: absolute;
+  padding: 15px 0;
+  background-color: rgba(255,255,255,0.95);
+  color: var(--text);
+  border-radius: 15px;
+  top: 30px;
+  right: 15px;
+  display: none;
+  box-shadow: 0 12px 30px rgba(15,23,36,0.08);
+}
+.action_menu ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.action_menu ul li{
+  width: 100%;
+  padding: 10px 15px;
+  margin-bottom: 5px;
+}
+.action_menu ul li i{
+  padding-right: 10px;
+}
+.action_menu ul li:hover{
+  cursor: pointer;
+  background-color: rgba(15,23,36,0.03);
+}
+
+/* small screen tweaks */
+@media(max-width: 576px){
+  .contacts_card{
+    margin-bottom: 15px !important;
+  }
+  .card { height: auto; }
+  .msg_cotainer, .msg_cotainer_send { max-width: 72%; }
+}
+
+/* minor accessibility: focus style for interactive elements */
+button:focus, input:focus, textarea:focus {
+  outline: 3px solid rgba(43,107,230,0.12);
+  outline-offset: 2px;
+}
